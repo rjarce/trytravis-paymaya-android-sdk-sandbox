@@ -1,0 +1,798 @@
+
+> Configure project :sdk
+2.0.1
+WARNING: API 'variant.getJavaCompiler()' is obsolete and has been replaced with 'variant.getJavaCompileProvider()'.
+It will be removed at the end of 2019.
+For more information, see https://d.android.com/r/tools/task-configuration-avoidance.
+To determine what is calling variant.getJavaCompiler(), use -Pandroid.debug.obsoleteApi=true on the command line to display more information.
+WARNING: API 'variantOutput.getPackageLibrary()' is obsolete and has been replaced with 'variant.getPackageLibraryProvider()'.
+It will be removed at the end of 2019.
+For more information, see https://d.android.com/r/tools/task-configuration-avoidance.
+To determine what is calling variantOutput.getPackageLibrary(), use -Pandroid.debug.obsoleteApi=true on the command line to display more information.
+
+> Task :tasks
+
+------------------------------------------------------------
+Tasks runnable from root project
+------------------------------------------------------------
+
+Android tasks
+-------------
+sdk:androidDependencies - Displays the Android dependencies of the project.
+sdk-demo:androidDependencies - Displays the Android dependencies of the project.
+sdk:signingReport - Displays the signing info for the base and test modules
+sdk-demo:signingReport - Displays the signing info for the base and test modules
+sdk:sourceSets - Prints out all the source sets defined in this project.
+sdk-demo:sourceSets - Prints out all the source sets defined in this project.
+
+AppCenter tasks
+---------------
+sdk-demo:appCenterAssembleAndUploadCustomstyleRelease - Assemble and upload customstyleRelease APK to AppCenter
+sdk-demo:appCenterAssembleAndUploadDefaultstyleRelease - Assemble and upload defaultstyleRelease APK to AppCenter
+sdk-demo:appCenterUploadCustomstyleRelease - Upload customstyleRelease APK to AppCenter
+sdk-demo:appCenterUploadDefaultstyleRelease - Upload defaultstyleRelease APK to AppCenter
+
+Build tasks
+-----------
+sdk:assemble - Assemble main outputs for all the variants.
+sdk-demo:assemble - Assemble main outputs for all the variants.
+sdk:assembleAndroidTest - Assembles all the Test applications.
+sdk-demo:assembleAndroidTest - Assembles all the Test applications.
+sdk-demo:assembleCustomstyle - Assembles main outputs for all Customstyle variants.
+sdk-demo:assembleDebug - Assembles main outputs for all Debug variants.
+sdk-demo:assembleDefaultstyle - Assembles main outputs for all Defaultstyle variants.
+sdk-demo:assembleRelease - Assembles main outputs for all Release variants.
+sdk:build - Assembles and tests this project.
+sdk-demo:build - Assembles and tests this project.
+sdk:buildDependents - Assembles and tests this project and all projects that depend on it.
+sdk-demo:buildDependents - Assembles and tests this project and all projects that depend on it.
+sdk:buildNeeded - Assembles and tests this project and all projects it depends on.
+sdk-demo:buildNeeded - Assembles and tests this project and all projects it depends on.
+sdk-demo:bundle - Assemble bundles for all the variants.
+sdk-demo:bundleCustomstyle - Assembles bundles for all Customstyle variants.
+sdk-demo:bundleDebug - Assembles bundles for all Debug variants.
+sdk-demo:bundleDefaultstyle - Assembles bundles for all Defaultstyle variants.
+sdk-demo:bundleRelease - Assembles bundles for all Release variants.
+sdk:clean - Deletes the build directory.
+sdk-demo:clean - Deletes the build directory.
+sdk:cleanBuildCache - Deletes the build cache directory.
+sdk-demo:cleanBuildCache - Deletes the build cache directory.
+sdk-demo:compileCustomstyleDebugAndroidTestSources
+sdk-demo:compileCustomstyleDebugSources
+sdk-demo:compileCustomstyleDebugUnitTestSources
+sdk-demo:compileCustomstyleReleaseSources
+sdk-demo:compileCustomstyleReleaseUnitTestSources
+sdk:compileDebugAndroidTestSources
+sdk:compileDebugSources
+sdk:compileDebugUnitTestSources
+sdk-demo:compileDefaultstyleDebugAndroidTestSources
+sdk-demo:compileDefaultstyleDebugSources
+sdk-demo:compileDefaultstyleDebugUnitTestSources
+sdk-demo:compileDefaultstyleReleaseSources
+sdk-demo:compileDefaultstyleReleaseUnitTestSources
+sdk:compileReleaseSources
+sdk:compileReleaseUnitTestSources
+sdk:extractDebugAnnotations - Extracts Android annotations for the debug variant into the archive file
+sdk:extractReleaseAnnotations - Extracts Android annotations for the release variant into the archive file
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
+
+Cleanup tasks
+-------------
+sdk:lintFix - Runs lint on all variants and applies any safe suggestions to the source code.
+sdk-demo:lintFix - Runs lint on all variants and applies any safe suggestions to the source code.
+
+Documentation tasks
+-------------------
+sdk:dokka - Generates dokka documentation for Kotlin
+
+Formatting tasks
+----------------
+sdk-demo:ktlintCustomstyleDebugFormat - Runs ktlint formatter on all kotlin sources for android customstyleDebug variant in this project.
+sdk-demo:ktlintCustomstyleReleaseFormat - Runs ktlint formatter on all kotlin sources for android customstyleRelease variant in this project.
+sdk:ktlintDebugFormat - Runs ktlint formatter on all kotlin sources for android debug variant in this project.
+sdk-demo:ktlintDefaultstyleDebugFormat - Runs ktlint formatter on all kotlin sources for android defaultstyleDebug variant in this project.
+sdk-demo:ktlintDefaultstyleReleaseFormat - Runs ktlint formatter on all kotlin sources for android defaultstyleRelease variant in this project.
+sdk:ktlintFormat - Runs the ktlint formatter on all kotlin sources in this project.
+sdk-demo:ktlintFormat - Runs the ktlint formatter on all kotlin sources in this project.
+sdk:ktlintReleaseFormat - Runs ktlint formatter on all kotlin sources for android release variant in this project.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'paymaya-sdk-android'.
+sdk:buildEnvironment - Displays all buildscript dependencies declared in project ':sdk'.
+sdk-demo:buildEnvironment - Displays all buildscript dependencies declared in project ':sdk-demo'.
+components - Displays the components produced by root project 'paymaya-sdk-android'. [incubating]
+sdk:components - Displays the components produced by project ':sdk'. [incubating]
+sdk-demo:components - Displays the components produced by project ':sdk-demo'. [incubating]
+dependencies - Displays all dependencies declared in root project 'paymaya-sdk-android'.
+sdk:dependencies - Displays all dependencies declared in project ':sdk'.
+sdk-demo:dependencies - Displays all dependencies declared in project ':sdk-demo'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'paymaya-sdk-android'.
+sdk:dependencyInsight - Displays the insight into a specific dependency in project ':sdk'.
+sdk-demo:dependencyInsight - Displays the insight into a specific dependency in project ':sdk-demo'.
+dependentComponents - Displays the dependent components of components in root project 'paymaya-sdk-android'. [incubating]
+sdk:dependentComponents - Displays the dependent components of components in project ':sdk'. [incubating]
+sdk-demo:dependentComponents - Displays the dependent components of components in project ':sdk-demo'. [incubating]
+help - Displays a help message.
+sdk:help - Displays a help message.
+sdk-demo:help - Displays a help message.
+model - Displays the configuration model of root project 'paymaya-sdk-android'. [incubating]
+sdk:model - Displays the configuration model of project ':sdk'. [incubating]
+sdk-demo:model - Displays the configuration model of project ':sdk-demo'. [incubating]
+projects - Displays the sub-projects of root project 'paymaya-sdk-android'.
+sdk:projects - Displays the sub-projects of project ':sdk'.
+sdk-demo:projects - Displays the sub-projects of project ':sdk-demo'.
+properties - Displays the properties of root project 'paymaya-sdk-android'.
+sdk:properties - Displays the properties of project ':sdk'.
+sdk-demo:properties - Displays the properties of project ':sdk-demo'.
+tasks - Displays the tasks runnable from root project 'paymaya-sdk-android' (some of the displayed tasks may belong to subprojects).
+sdk:tasks - Displays the tasks runnable from project ':sdk'.
+sdk-demo:tasks - Displays the tasks runnable from project ':sdk-demo'.
+
+Install tasks
+-------------
+sdk-demo:installCustomstyleDebug - Installs the DebugCustomstyle build.
+sdk-demo:installCustomstyleDebugAndroidTest - Installs the android (on device) tests for the CustomstyleDebug build.
+sdk-demo:installCustomstyleRelease - Installs the ReleaseCustomstyle build.
+sdk:installDebugAndroidTest - Installs the android (on device) tests for the Debug build.
+sdk-demo:installDefaultstyleDebug - Installs the DebugDefaultstyle build.
+sdk-demo:installDefaultstyleDebugAndroidTest - Installs the android (on device) tests for the DefaultstyleDebug build.
+sdk-demo:installDefaultstyleRelease - Installs the ReleaseDefaultstyle build.
+sdk:uninstallAll - Uninstall all applications.
+sdk-demo:uninstallAll - Uninstall all applications.
+sdk-demo:uninstallCustomstyleDebug - Uninstalls the DebugCustomstyle build.
+sdk-demo:uninstallCustomstyleDebugAndroidTest - Uninstalls the android (on device) tests for the CustomstyleDebug build.
+sdk-demo:uninstallCustomstyleRelease - Uninstalls the ReleaseCustomstyle build.
+sdk:uninstallDebugAndroidTest - Uninstalls the android (on device) tests for the Debug build.
+sdk-demo:uninstallDefaultstyleDebug - Uninstalls the DebugDefaultstyle build.
+sdk-demo:uninstallDefaultstyleDebugAndroidTest - Uninstalls the android (on device) tests for the DefaultstyleDebug build.
+sdk-demo:uninstallDefaultstyleRelease - Uninstalls the ReleaseDefaultstyle build.
+
+Publishing tasks
+----------------
+artifactoryDeploy - Deploys artifacts and build-info to Artifactory.
+artifactoryDistributeBuild - Distributes build artifacts to Bintray.
+artifactoryPublish - Adds artifacts and generates build-info to be later deployed to Artifactory.
+sdk:artifactoryPublish - Adds artifacts and generates build-info to be later deployed to Artifactory.
+bintrayPublish - Bintray Sign, publish and Maven central sync task
+bintrayUpload - Publishes artifacts to bintray.com.
+sdk:bintrayUpload - Publishes artifacts to bintray.com.
+sdk:generateMetadataFileForDebugPublication - Generates the Gradle metadata file for publication 'debug'.
+sdk:generateMetadataFileForReleasePublication - Generates the Gradle metadata file for publication 'release'.
+sdk:generatePomFileForDebugPublication - Generates the Maven POM file for publication 'debug'.
+sdk:generatePomFileForReleasePublication - Generates the Maven POM file for publication 'release'.
+sdk:publish - Publishes all publications produced by this project.
+sdk:publishDebugPublicationToMavenLocal - Publishes Maven publication 'debug' to the local Maven repository.
+sdk:publishReleasePublicationToMavenLocal - Publishes Maven publication 'release' to the local Maven repository.
+sdk:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+
+Upload tasks
+------------
+sdk:uploadArchives - Uploads all artifacts belonging to configuration ':sdk:archives'
+
+Verification tasks
+------------------
+sdk:check - Runs all checks.
+sdk-demo:check - Runs all checks.
+sdk:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+sdk-demo:connectedAndroidTest - Installs and runs instrumentation tests for all flavors on connected devices.
+sdk:connectedCheck - Runs all device checks on currently connected devices.
+sdk-demo:connectedCheck - Runs all device checks on currently connected devices.
+sdk-demo:connectedCustomstyleDebugAndroidTest - Installs and runs the tests for customstyleDebug on connected devices.
+sdk:connectedDebugAndroidTest - Installs and runs the tests for debug on connected devices.
+sdk-demo:connectedDefaultstyleDebugAndroidTest - Installs and runs the tests for defaultstyleDebug on connected devices.
+sdk:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+sdk-demo:deviceAndroidTest - Installs and runs instrumentation tests using all Device Providers.
+sdk:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+sdk-demo:deviceCheck - Runs all device checks using Device Providers and Test Servers.
+sdk:ktlintCheck - Runs ktlint on all kotlin sources in this project.
+sdk-demo:ktlintCheck - Runs ktlint on all kotlin sources in this project.
+sdk-demo:ktlintCustomstyleDebugCheck - Runs ktlint on all kotlin sources for android customstyleDebug variant in this project.
+sdk-demo:ktlintCustomstyleReleaseCheck - Runs ktlint on all kotlin sources for android customstyleRelease variant in this project.
+sdk:ktlintDebugCheck - Runs ktlint on all kotlin sources for android debug variant in this project.
+sdk-demo:ktlintDefaultstyleDebugCheck - Runs ktlint on all kotlin sources for android defaultstyleDebug variant in this project.
+sdk-demo:ktlintDefaultstyleReleaseCheck - Runs ktlint on all kotlin sources for android defaultstyleRelease variant in this project.
+sdk:ktlintReleaseCheck - Runs ktlint on all kotlin sources for android release variant in this project.
+sdk:lint - Runs lint on all variants.
+sdk-demo:lint - Runs lint on all variants.
+sdk-demo:lintCustomstyleDebug - Runs lint on the CustomstyleDebug build.
+sdk-demo:lintCustomstyleRelease - Runs lint on the CustomstyleRelease build.
+sdk:lintDebug - Runs lint on the Debug build.
+sdk-demo:lintDefaultstyleDebug - Runs lint on the DefaultstyleDebug build.
+sdk-demo:lintDefaultstyleRelease - Runs lint on the DefaultstyleRelease build.
+sdk:lintRelease - Runs lint on the Release build.
+sdk-demo:lintVitalCustomstyleRelease - Runs lint on just the fatal issues in the customstyleRelease build.
+sdk-demo:lintVitalDefaultstyleRelease - Runs lint on just the fatal issues in the defaultstyleRelease build.
+sdk:test - Run unit tests for all variants.
+sdk-demo:test - Run unit tests for all variants.
+sdk-demo:testCustomstyleDebugUnitTest - Run unit tests for the customstyleDebug build.
+sdk-demo:testCustomstyleReleaseUnitTest - Run unit tests for the customstyleRelease build.
+sdk:testDebugUnitTest - Run unit tests for the debug build.
+sdk-demo:testDefaultstyleDebugUnitTest - Run unit tests for the defaultstyleDebug build.
+sdk-demo:testDefaultstyleReleaseUnitTest - Run unit tests for the defaultstyleRelease build.
+sdk:testReleaseUnitTest - Run unit tests for the release build.
+
+Other tasks
+-----------
+sdk-demo:assembleCustomstyleDebug - Assembles main output for variant customstyleDebug
+sdk-demo:assembleCustomstyleDebugAndroidTest - Assembles main output for variant customstyleDebugAndroidTest
+sdk-demo:assembleCustomstyleDebugUnitTest - Assembles main output for variant customstyleDebugUnitTest
+sdk-demo:assembleCustomstyleRelease - Assembles main output for variant customstyleRelease
+sdk-demo:assembleCustomstyleReleaseUnitTest - Assembles main output for variant customstyleReleaseUnitTest
+sdk:assembleDebug - Assembles main output for variant debug
+sdk:assembleDebugAndroidTest - Assembles main output for variant debugAndroidTest
+sdk:assembleDebugUnitTest - Assembles main output for variant debugUnitTest
+sdk-demo:assembleDefaultstyleDebug - Assembles main output for variant defaultstyleDebug
+sdk-demo:assembleDefaultstyleDebugAndroidTest - Assembles main output for variant defaultstyleDebugAndroidTest
+sdk-demo:assembleDefaultstyleDebugUnitTest - Assembles main output for variant defaultstyleDebugUnitTest
+sdk-demo:assembleDefaultstyleRelease - Assembles main output for variant defaultstyleRelease
+sdk-demo:assembleDefaultstyleReleaseUnitTest - Assembles main output for variant defaultstyleReleaseUnitTest
+sdk:assembleRelease - Assembles main output for variant release
+sdk:assembleReleaseUnitTest - Assembles main output for variant releaseUnitTest
+sdk-demo:buildCustomstyleDebugPreBundle
+sdk-demo:buildCustomstyleReleasePreBundle
+sdk-demo:buildDefaultstyleDebugPreBundle
+sdk-demo:buildDefaultstyleReleasePreBundle
+sdk-demo:bundleCustomstyleDebug - Assembles bundle for variant customstyleDebug
+sdk-demo:bundleCustomstyleDebugAndroidTestClasses
+sdk-demo:bundleCustomstyleDebugAndroidTestResources
+sdk-demo:bundleCustomstyleDebugClasses
+sdk-demo:bundleCustomstyleDebugResources
+sdk-demo:bundleCustomstyleDebugUnitTestClasses
+sdk-demo:bundleCustomstyleRelease - Assembles bundle for variant customstyleRelease
+sdk-demo:bundleCustomstyleReleaseClasses
+sdk-demo:bundleCustomstyleReleaseResources
+sdk-demo:bundleCustomstyleReleaseUnitTestClasses
+sdk:bundleDebugAar - Assembles a bundle containing the library in debug.
+sdk:bundleDebugAndroidTestResources
+sdk-demo:bundleDefaultstyleDebug - Assembles bundle for variant defaultstyleDebug
+sdk-demo:bundleDefaultstyleDebugAndroidTestClasses
+sdk-demo:bundleDefaultstyleDebugAndroidTestResources
+sdk-demo:bundleDefaultstyleDebugClasses
+sdk-demo:bundleDefaultstyleDebugResources
+sdk-demo:bundleDefaultstyleDebugUnitTestClasses
+sdk-demo:bundleDefaultstyleRelease - Assembles bundle for variant defaultstyleRelease
+sdk-demo:bundleDefaultstyleReleaseClasses
+sdk-demo:bundleDefaultstyleReleaseResources
+sdk-demo:bundleDefaultstyleReleaseUnitTestClasses
+sdk:bundleLibCompileDebug
+sdk:bundleLibCompileDebugAndroidTest
+sdk:bundleLibCompileDebugUnitTest
+sdk:bundleLibCompileRelease
+sdk:bundleLibCompileReleaseUnitTest
+sdk:bundleLibResDebug
+sdk:bundleLibResRelease
+sdk:bundleLibRuntimeDebug
+sdk:bundleLibRuntimeRelease
+sdk:bundleReleaseAar - Assembles a bundle containing the library in release.
+sdk-demo:checkCustomstyleDebugAndroidTestDuplicateClasses
+sdk-demo:checkCustomstyleDebugDuplicateClasses
+sdk-demo:checkCustomstyleDebugManifest
+sdk-demo:checkCustomstyleReleaseManifest
+sdk:checkDebugAndroidTestDuplicateClasses
+sdk:checkDebugManifest
+sdk-demo:checkDefaultstyleDebugAndroidTestDuplicateClasses
+sdk-demo:checkDefaultstyleDebugDuplicateClasses
+sdk-demo:checkDefaultstyleDebugManifest
+sdk-demo:checkDefaultstyleReleaseManifest
+sdk:checkReleaseManifest
+clean
+sdk-demo:collectCustomstyleDebugDependencies
+sdk-demo:collectCustomstyleReleaseDependencies
+sdk-demo:collectDefaultstyleDebugDependencies
+sdk-demo:collectDefaultstyleReleaseDependencies
+sdk-demo:compileCustomstyleDebugAidl
+sdk-demo:compileCustomstyleDebugAndroidTestAidl
+sdk-demo:compileCustomstyleDebugAndroidTestJavaWithJavac
+sdk-demo:compileCustomstyleDebugAndroidTestKotlin - Compiles the customstyleDebugAndroidTest kotlin.
+sdk-demo:compileCustomstyleDebugAndroidTestRenderscript
+sdk-demo:compileCustomstyleDebugAndroidTestShaders
+sdk-demo:compileCustomstyleDebugJavaWithJavac
+sdk-demo:compileCustomstyleDebugKotlin - Compiles the customstyleDebug kotlin.
+sdk-demo:compileCustomstyleDebugRenderscript
+sdk-demo:compileCustomstyleDebugShaders
+sdk-demo:compileCustomstyleDebugUnitTestJavaWithJavac
+sdk-demo:compileCustomstyleDebugUnitTestKotlin - Compiles the customstyleDebugUnitTest kotlin.
+sdk-demo:compileCustomstyleReleaseAidl
+sdk-demo:compileCustomstyleReleaseJavaWithJavac
+sdk-demo:compileCustomstyleReleaseKotlin - Compiles the customstyleRelease kotlin.
+sdk-demo:compileCustomstyleReleaseRenderscript
+sdk-demo:compileCustomstyleReleaseShaders
+sdk-demo:compileCustomstyleReleaseUnitTestJavaWithJavac
+sdk-demo:compileCustomstyleReleaseUnitTestKotlin - Compiles the customstyleReleaseUnitTest kotlin.
+sdk:compileDebugAidl
+sdk:compileDebugAndroidTestAidl
+sdk:compileDebugAndroidTestJavaWithJavac
+sdk:compileDebugAndroidTestKotlin - Compiles the debugAndroidTest kotlin.
+sdk:compileDebugAndroidTestRenderscript
+sdk:compileDebugAndroidTestShaders
+sdk:compileDebugJavaWithJavac
+sdk:compileDebugKotlin - Compiles the debug kotlin.
+sdk:compileDebugRenderscript
+sdk:compileDebugShaders
+sdk:compileDebugUnitTestJavaWithJavac
+sdk:compileDebugUnitTestKotlin - Compiles the debugUnitTest kotlin.
+sdk-demo:compileDefaultstyleDebugAidl
+sdk-demo:compileDefaultstyleDebugAndroidTestAidl
+sdk-demo:compileDefaultstyleDebugAndroidTestJavaWithJavac
+sdk-demo:compileDefaultstyleDebugAndroidTestKotlin - Compiles the defaultstyleDebugAndroidTest kotlin.
+sdk-demo:compileDefaultstyleDebugAndroidTestRenderscript
+sdk-demo:compileDefaultstyleDebugAndroidTestShaders
+sdk-demo:compileDefaultstyleDebugJavaWithJavac
+sdk-demo:compileDefaultstyleDebugKotlin - Compiles the defaultstyleDebug kotlin.
+sdk-demo:compileDefaultstyleDebugRenderscript
+sdk-demo:compileDefaultstyleDebugShaders
+sdk-demo:compileDefaultstyleDebugUnitTestJavaWithJavac
+sdk-demo:compileDefaultstyleDebugUnitTestKotlin - Compiles the defaultstyleDebugUnitTest kotlin.
+sdk-demo:compileDefaultstyleReleaseAidl
+sdk-demo:compileDefaultstyleReleaseJavaWithJavac
+sdk-demo:compileDefaultstyleReleaseKotlin - Compiles the defaultstyleRelease kotlin.
+sdk-demo:compileDefaultstyleReleaseRenderscript
+sdk-demo:compileDefaultstyleReleaseShaders
+sdk-demo:compileDefaultstyleReleaseUnitTestJavaWithJavac
+sdk-demo:compileDefaultstyleReleaseUnitTestKotlin - Compiles the defaultstyleReleaseUnitTest kotlin.
+sdk:compileLint
+sdk-demo:compileLint
+sdk:compileReleaseAidl
+sdk:compileReleaseJavaWithJavac
+sdk:compileReleaseKotlin - Compiles the release kotlin.
+sdk:compileReleaseRenderscript
+sdk:compileReleaseShaders
+sdk:compileReleaseUnitTestJavaWithJavac
+sdk:compileReleaseUnitTestKotlin - Compiles the releaseUnitTest kotlin.
+sdk-demo:configureCustomstyleDebugDependencies
+sdk-demo:configureCustomstyleReleaseDependencies
+sdk-demo:configureDefaultstyleDebugDependencies
+sdk-demo:configureDefaultstyleReleaseDependencies
+sdk:consumeConfigAttr
+sdk-demo:consumeConfigAttr
+sdk-demo:createCustomstyleDebugCompatibleScreenManifests
+sdk-demo:createCustomstyleReleaseCompatibleScreenManifests
+sdk-demo:createDefaultstyleDebugCompatibleScreenManifests
+sdk-demo:createDefaultstyleReleaseCompatibleScreenManifests
+sdk:createFullJarDebug
+sdk:createFullJarRelease
+sdk:createMockableJar
+sdk-demo:createMockableJar
+sdk:desugarDebugAndroidTestFileDependencies
+sdk:dexDebug
+sdk:dexRelease
+sdk-demo:dummycustomstyleDebugUnitTest
+sdk-demo:dummycustomstyleReleaseUnitTest
+sdk:dummydebugUnitTest
+sdk-demo:dummydefaultstyleDebugUnitTest
+sdk-demo:dummydefaultstyleReleaseUnitTest
+sdk:dummyreleaseUnitTest
+sdk-demo:extractApksForCustomstyleDebug
+sdk-demo:extractApksForCustomstyleRelease
+sdk-demo:extractApksForDefaultstyleDebug
+sdk-demo:extractApksForDefaultstyleRelease
+extractModuleInfo - Extracts module info to an intermediate file
+sdk:extractModuleInfo - Extracts module info to an intermediate file
+sdk:extractProguardFiles
+sdk-demo:extractProguardFiles
+sdk-demo:generateCustomstyleDebugAndroidTestAssets
+sdk-demo:generateCustomstyleDebugAndroidTestBuildConfig
+sdk-demo:generateCustomstyleDebugAndroidTestResources
+sdk-demo:generateCustomstyleDebugAndroidTestResValues
+sdk-demo:generateCustomstyleDebugAndroidTestSources
+sdk-demo:generateCustomstyleDebugAssets
+sdk-demo:generateCustomstyleDebugBuildConfig
+sdk-demo:generateCustomstyleDebugFeatureMetadata
+sdk-demo:generateCustomstyleDebugFeatureTransitiveDeps
+sdk-demo:generateCustomstyleDebugResources
+sdk-demo:generateCustomstyleDebugResValues
+sdk-demo:generateCustomstyleDebugSources
+sdk-demo:generateCustomstyleDebugUnitTestAssets
+sdk-demo:generateCustomstyleDebugUnitTestResources
+sdk-demo:generateCustomstyleDebugUnitTestSources
+sdk-demo:generateCustomstyleReleaseAssets
+sdk-demo:generateCustomstyleReleaseBuildConfig
+sdk-demo:generateCustomstyleReleaseFeatureMetadata
+sdk-demo:generateCustomstyleReleaseFeatureTransitiveDeps
+sdk-demo:generateCustomstyleReleaseResources
+sdk-demo:generateCustomstyleReleaseResValues
+sdk-demo:generateCustomstyleReleaseSources
+sdk-demo:generateCustomstyleReleaseUnitTestAssets
+sdk-demo:generateCustomstyleReleaseUnitTestResources
+sdk-demo:generateCustomstyleReleaseUnitTestSources
+sdk:generateDebugAndroidTestAssets
+sdk:generateDebugAndroidTestBuildConfig
+sdk:generateDebugAndroidTestResources
+sdk:generateDebugAndroidTestResValues
+sdk:generateDebugAndroidTestSources
+sdk:generateDebugAssets
+sdk:generateDebugBuildConfig
+sdk:generateDebugResources
+sdk:generateDebugResValues
+sdk:generateDebugRFile
+sdk:generateDebugSources
+sdk:generateDebugUnitTestAssets
+sdk:generateDebugUnitTestResources
+sdk:generateDebugUnitTestSources
+sdk-demo:generateDefaultstyleDebugAndroidTestAssets
+sdk-demo:generateDefaultstyleDebugAndroidTestBuildConfig
+sdk-demo:generateDefaultstyleDebugAndroidTestResources
+sdk-demo:generateDefaultstyleDebugAndroidTestResValues
+sdk-demo:generateDefaultstyleDebugAndroidTestSources
+sdk-demo:generateDefaultstyleDebugAssets
+sdk-demo:generateDefaultstyleDebugBuildConfig
+sdk-demo:generateDefaultstyleDebugFeatureMetadata
+sdk-demo:generateDefaultstyleDebugFeatureTransitiveDeps
+sdk-demo:generateDefaultstyleDebugResources
+sdk-demo:generateDefaultstyleDebugResValues
+sdk-demo:generateDefaultstyleDebugSources
+sdk-demo:generateDefaultstyleDebugUnitTestAssets
+sdk-demo:generateDefaultstyleDebugUnitTestResources
+sdk-demo:generateDefaultstyleDebugUnitTestSources
+sdk-demo:generateDefaultstyleReleaseAssets
+sdk-demo:generateDefaultstyleReleaseBuildConfig
+sdk-demo:generateDefaultstyleReleaseFeatureMetadata
+sdk-demo:generateDefaultstyleReleaseFeatureTransitiveDeps
+sdk-demo:generateDefaultstyleReleaseResources
+sdk-demo:generateDefaultstyleReleaseResValues
+sdk-demo:generateDefaultstyleReleaseSources
+sdk-demo:generateDefaultstyleReleaseUnitTestAssets
+sdk-demo:generateDefaultstyleReleaseUnitTestResources
+sdk-demo:generateDefaultstyleReleaseUnitTestSources
+sdk:generateJavadocsJarForDebugPublication
+sdk:generateJavadocsJarForReleasePublication
+sdk:generateReleaseAssets
+sdk:generateReleaseBuildConfig
+sdk:generateReleaseResources
+sdk:generateReleaseResValues
+sdk:generateReleaseRFile
+sdk:generateReleaseSources
+sdk:generateReleaseUnitTestAssets
+sdk:generateReleaseUnitTestResources
+sdk:generateReleaseUnitTestSources
+sdk:generateSourcesJarForDebugPublication
+sdk:generateSourcesJarForReleasePublication
+sdk:javadocDebug
+sdk:javadocRelease
+sdk-demo:javaPreCompileCustomstyleDebug
+sdk-demo:javaPreCompileCustomstyleDebugAndroidTest
+sdk-demo:javaPreCompileCustomstyleDebugUnitTest
+sdk-demo:javaPreCompileCustomstyleRelease
+sdk-demo:javaPreCompileCustomstyleReleaseUnitTest
+sdk:javaPreCompileDebug
+sdk:javaPreCompileDebugAndroidTest
+sdk:javaPreCompileDebugUnitTest
+sdk-demo:javaPreCompileDefaultstyleDebug
+sdk-demo:javaPreCompileDefaultstyleDebugAndroidTest
+sdk-demo:javaPreCompileDefaultstyleDebugUnitTest
+sdk-demo:javaPreCompileDefaultstyleRelease
+sdk-demo:javaPreCompileDefaultstyleReleaseUnitTest
+sdk:javaPreCompileRelease
+sdk:javaPreCompileReleaseUnitTest
+sdk-demo:ktlintAndroidTestCustomstyleDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestCustomstyleDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestCustomstyleSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestCustomstyleSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintAndroidTestDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintAndroidTestDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestDefaultstyleDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestDefaultstyleDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestDefaultstyleSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestDefaultstyleSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintAndroidTestSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintAndroidTestSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintAndroidTestSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintCustomstyleDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintCustomstyleDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintCustomstyleReleaseSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintCustomstyleReleaseSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintCustomstyleSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintCustomstyleSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintDefaultstyleDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintDefaultstyleDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintDefaultstyleReleaseSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintDefaultstyleReleaseSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintDefaultstyleSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintDefaultstyleSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintKotlinScriptCheck - Runs a check against all .kts files in project directory to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintKotlinScriptCheck - Runs a check against all .kts files in project directory to ensure that they are formatted according to ktlint.
+sdk:ktlintKotlinScriptFormat - Format all .kts files in project directory to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintKotlinScriptFormat - Format all .kts files in project directory to ensure that they are formatted according to ktlint.
+sdk:ktlintMainSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintMainSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintMainSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintMainSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintReleaseSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintReleaseSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintReleaseSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintReleaseSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestCustomstyleDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestCustomstyleDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestCustomstyleReleaseSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestCustomstyleReleaseSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestCustomstyleSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestCustomstyleSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintTestDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintTestDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestDefaultstyleDebugSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestDefaultstyleDebugSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestDefaultstyleReleaseSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestDefaultstyleReleaseSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestDefaultstyleSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestDefaultstyleSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintTestReleaseSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestReleaseSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintTestReleaseSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestReleaseSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintTestSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestSourceSetCheck - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk:ktlintTestSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:ktlintTestSourceSetFormat - Runs a check against all .kt files to ensure that they are formatted according to ktlint.
+sdk-demo:mainApkListPersistenceCustomstyleDebug
+sdk-demo:mainApkListPersistenceCustomstyleDebugAndroidTest
+sdk-demo:mainApkListPersistenceCustomstyleRelease
+sdk:mainApkListPersistenceDebugAndroidTest
+sdk-demo:mainApkListPersistenceDefaultstyleDebug
+sdk-demo:mainApkListPersistenceDefaultstyleDebugAndroidTest
+sdk-demo:mainApkListPersistenceDefaultstyleRelease
+sdk-demo:makeApkFromBundleForCustomstyleDebug
+sdk-demo:makeApkFromBundleForCustomstyleRelease
+sdk-demo:makeApkFromBundleForDefaultstyleDebug
+sdk-demo:makeApkFromBundleForDefaultstyleRelease
+sdk-demo:mergeCustomstyleDebugAndroidTestAssets
+sdk-demo:mergeCustomstyleDebugAndroidTestGeneratedProguardFiles
+sdk-demo:mergeCustomstyleDebugAndroidTestJavaResource
+sdk-demo:mergeCustomstyleDebugAndroidTestJniLibFolders
+sdk-demo:mergeCustomstyleDebugAndroidTestNativeLibs
+sdk-demo:mergeCustomstyleDebugAndroidTestResources
+sdk-demo:mergeCustomstyleDebugAndroidTestShaders
+sdk-demo:mergeCustomstyleDebugAssets
+sdk-demo:mergeCustomstyleDebugGeneratedProguardFiles
+sdk-demo:mergeCustomstyleDebugJavaResource
+sdk-demo:mergeCustomstyleDebugJniLibFolders
+sdk-demo:mergeCustomstyleDebugNativeLibs
+sdk-demo:mergeCustomstyleDebugResources
+sdk-demo:mergeCustomstyleDebugShaders
+sdk-demo:mergeCustomstyleReleaseAssets
+sdk-demo:mergeCustomstyleReleaseGeneratedProguardFiles
+sdk-demo:mergeCustomstyleReleaseJavaResource
+sdk-demo:mergeCustomstyleReleaseJniLibFolders
+sdk-demo:mergeCustomstyleReleaseNativeLibs
+sdk-demo:mergeCustomstyleReleaseResources
+sdk-demo:mergeCustomstyleReleaseShaders
+sdk:mergeDebugAndroidTestAssets
+sdk:mergeDebugAndroidTestGeneratedProguardFiles
+sdk:mergeDebugAndroidTestJavaResource
+sdk:mergeDebugAndroidTestJniLibFolders
+sdk:mergeDebugAndroidTestNativeLibs
+sdk:mergeDebugAndroidTestResources
+sdk:mergeDebugAndroidTestShaders
+sdk:mergeDebugAssets
+sdk:mergeDebugConsumerProguardFiles
+sdk:mergeDebugGeneratedProguardFiles
+sdk:mergeDebugJavaResource
+sdk:mergeDebugJniLibFolders
+sdk:mergeDebugNativeLibs
+sdk:mergeDebugResources
+sdk:mergeDebugShaders
+sdk-demo:mergeDefaultstyleDebugAndroidTestAssets
+sdk-demo:mergeDefaultstyleDebugAndroidTestGeneratedProguardFiles
+sdk-demo:mergeDefaultstyleDebugAndroidTestJavaResource
+sdk-demo:mergeDefaultstyleDebugAndroidTestJniLibFolders
+sdk-demo:mergeDefaultstyleDebugAndroidTestNativeLibs
+sdk-demo:mergeDefaultstyleDebugAndroidTestResources
+sdk-demo:mergeDefaultstyleDebugAndroidTestShaders
+sdk-demo:mergeDefaultstyleDebugAssets
+sdk-demo:mergeDefaultstyleDebugGeneratedProguardFiles
+sdk-demo:mergeDefaultstyleDebugJavaResource
+sdk-demo:mergeDefaultstyleDebugJniLibFolders
+sdk-demo:mergeDefaultstyleDebugNativeLibs
+sdk-demo:mergeDefaultstyleDebugResources
+sdk-demo:mergeDefaultstyleDebugShaders
+sdk-demo:mergeDefaultstyleReleaseAssets
+sdk-demo:mergeDefaultstyleReleaseGeneratedProguardFiles
+sdk-demo:mergeDefaultstyleReleaseJavaResource
+sdk-demo:mergeDefaultstyleReleaseJniLibFolders
+sdk-demo:mergeDefaultstyleReleaseNativeLibs
+sdk-demo:mergeDefaultstyleReleaseResources
+sdk-demo:mergeDefaultstyleReleaseShaders
+sdk-demo:mergeExtDexCustomstyleDebug
+sdk-demo:mergeExtDexCustomstyleDebugAndroidTest
+sdk:mergeExtDexDebugAndroidTest
+sdk-demo:mergeExtDexDefaultstyleDebug
+sdk-demo:mergeExtDexDefaultstyleDebugAndroidTest
+sdk-demo:mergeLibDexCustomstyleDebug
+sdk-demo:mergeLibDexCustomstyleDebugAndroidTest
+sdk:mergeLibDexDebugAndroidTest
+sdk-demo:mergeLibDexDefaultstyleDebug
+sdk-demo:mergeLibDexDefaultstyleDebugAndroidTest
+sdk-demo:mergeProjectDexCustomstyleDebug
+sdk-demo:mergeProjectDexCustomstyleDebugAndroidTest
+sdk:mergeProjectDexDebugAndroidTest
+sdk-demo:mergeProjectDexDefaultstyleDebug
+sdk-demo:mergeProjectDexDefaultstyleDebugAndroidTest
+sdk:mergeReleaseAssets
+sdk:mergeReleaseConsumerProguardFiles
+sdk:mergeReleaseGeneratedProguardFiles
+sdk:mergeReleaseJavaResource
+sdk:mergeReleaseJniLibFolders
+sdk:mergeReleaseNativeLibs
+sdk:mergeReleaseResources
+sdk:mergeReleaseShaders
+sdk-demo:packageCustomstyleDebug
+sdk-demo:packageCustomstyleDebugAndroidTest
+sdk-demo:packageCustomstyleDebugBundle
+sdk-demo:packageCustomstyleDebugUniversalApk
+sdk-demo:packageCustomstyleRelease
+sdk-demo:packageCustomstyleReleaseBundle
+sdk-demo:packageCustomstyleReleaseUniversalApk
+sdk:packageDebugAndroidTest
+sdk:packageDebugAssets
+sdk:packageDebugRenderscript
+sdk:packageDebugResources
+sdk-demo:packageDefaultstyleDebug
+sdk-demo:packageDefaultstyleDebugAndroidTest
+sdk-demo:packageDefaultstyleDebugBundle
+sdk-demo:packageDefaultstyleDebugUniversalApk
+sdk-demo:packageDefaultstyleRelease
+sdk-demo:packageDefaultstyleReleaseBundle
+sdk-demo:packageDefaultstyleReleaseUniversalApk
+sdk:packageReleaseAssets
+sdk:packageReleaseRenderscript
+sdk:packageReleaseResources
+sdk:parseDebugLibraryResources
+sdk:parseReleaseLibraryResources
+sdk:preBuild
+sdk-demo:preBuild
+sdk-demo:preCustomstyleDebugAndroidTestBuild
+sdk-demo:preCustomstyleDebugBuild
+sdk-demo:preCustomstyleDebugUnitTestBuild
+sdk-demo:preCustomstyleReleaseBuild
+sdk-demo:preCustomstyleReleaseUnitTestBuild
+sdk:preDebugAndroidTestBuild
+sdk:preDebugBuild
+sdk:preDebugUnitTestBuild
+sdk-demo:preDefaultstyleDebugAndroidTestBuild
+sdk-demo:preDefaultstyleDebugBuild
+sdk-demo:preDefaultstyleDebugUnitTestBuild
+sdk-demo:preDefaultstyleReleaseBuild
+sdk-demo:preDefaultstyleReleaseUnitTestBuild
+prepareKotlinBuildScriptModel
+sdk:prepareKotlinBuildScriptModel
+sdk-demo:prepareKotlinBuildScriptModel
+sdk:prepareLintJar
+sdk-demo:prepareLintJar
+sdk:prepareLintJarForPublish
+sdk-demo:prepareLintJarForPublish
+sdk:preReleaseBuild
+sdk:preReleaseUnitTestBuild
+sdk:printSdkVersion
+sdk-demo:processCustomstyleDebugAndroidTestJavaRes
+sdk-demo:processCustomstyleDebugAndroidTestManifest
+sdk-demo:processCustomstyleDebugAndroidTestResources
+sdk-demo:processCustomstyleDebugJavaRes
+sdk-demo:processCustomstyleDebugManifest
+sdk-demo:processCustomstyleDebugResources
+sdk-demo:processCustomstyleDebugUnitTestJavaRes
+sdk-demo:processCustomstyleReleaseJavaRes
+sdk-demo:processCustomstyleReleaseManifest
+sdk-demo:processCustomstyleReleaseResources
+sdk-demo:processCustomstyleReleaseUnitTestJavaRes
+sdk:processDebugAndroidTestJavaRes
+sdk:processDebugAndroidTestManifest
+sdk:processDebugAndroidTestResources
+sdk:processDebugJavaRes
+sdk:processDebugManifest
+sdk:processDebugUnitTestJavaRes
+sdk-demo:processDefaultstyleDebugAndroidTestJavaRes
+sdk-demo:processDefaultstyleDebugAndroidTestManifest
+sdk-demo:processDefaultstyleDebugAndroidTestResources
+sdk-demo:processDefaultstyleDebugJavaRes
+sdk-demo:processDefaultstyleDebugManifest
+sdk-demo:processDefaultstyleDebugResources
+sdk-demo:processDefaultstyleDebugUnitTestJavaRes
+sdk-demo:processDefaultstyleReleaseJavaRes
+sdk-demo:processDefaultstyleReleaseManifest
+sdk-demo:processDefaultstyleReleaseResources
+sdk-demo:processDefaultstyleReleaseUnitTestJavaRes
+sdk:processReleaseJavaRes
+sdk:processReleaseManifest
+sdk:processReleaseUnitTestJavaRes
+sdk-demo:reportBuildArtifactsCustomstyleDebug
+sdk-demo:reportBuildArtifactsCustomstyleRelease
+sdk:reportBuildArtifactsDebug
+sdk-demo:reportBuildArtifactsDefaultstyleDebug
+sdk-demo:reportBuildArtifactsDefaultstyleRelease
+sdk:reportBuildArtifactsRelease
+sdk:reportSourceSetTransformAndroidTest
+sdk-demo:reportSourceSetTransformAndroidTest
+sdk-demo:reportSourceSetTransformAndroidTestCustomstyle
+sdk-demo:reportSourceSetTransformAndroidTestCustomstyleDebug
+sdk:reportSourceSetTransformAndroidTestDebug
+sdk-demo:reportSourceSetTransformAndroidTestDebug
+sdk-demo:reportSourceSetTransformAndroidTestDefaultstyle
+sdk-demo:reportSourceSetTransformAndroidTestDefaultstyleDebug
+sdk-demo:reportSourceSetTransformCustomstyle
+sdk-demo:reportSourceSetTransformCustomstyleDebug
+sdk-demo:reportSourceSetTransformCustomstyleRelease
+sdk:reportSourceSetTransformDebug
+sdk-demo:reportSourceSetTransformDebug
+sdk-demo:reportSourceSetTransformDefaultstyle
+sdk-demo:reportSourceSetTransformDefaultstyleDebug
+sdk-demo:reportSourceSetTransformDefaultstyleRelease
+sdk:reportSourceSetTransformMain
+sdk-demo:reportSourceSetTransformMain
+sdk:reportSourceSetTransformRelease
+sdk-demo:reportSourceSetTransformRelease
+sdk:reportSourceSetTransformTest
+sdk-demo:reportSourceSetTransformTest
+sdk-demo:reportSourceSetTransformTestCustomstyle
+sdk-demo:reportSourceSetTransformTestCustomstyleDebug
+sdk-demo:reportSourceSetTransformTestCustomstyleRelease
+sdk:reportSourceSetTransformTestDebug
+sdk-demo:reportSourceSetTransformTestDebug
+sdk-demo:reportSourceSetTransformTestDefaultstyle
+sdk-demo:reportSourceSetTransformTestDefaultstyleDebug
+sdk-demo:reportSourceSetTransformTestDefaultstyleRelease
+sdk:reportSourceSetTransformTestRelease
+sdk-demo:reportSourceSetTransformTestRelease
+sdk:resolveConfigAttr
+sdk-demo:resolveConfigAttr
+sdk-demo:signCustomstyleDebugBundle
+sdk-demo:signCustomstyleReleaseBundle
+sdk-demo:signDefaultstyleDebugBundle
+sdk-demo:signDefaultstyleReleaseBundle
+sdk-demo:signingConfigWriterCustomstyleDebug
+sdk-demo:signingConfigWriterCustomstyleDebugAndroidTest
+sdk-demo:signingConfigWriterCustomstyleRelease
+sdk:signingConfigWriterDebugAndroidTest
+sdk-demo:signingConfigWriterDefaultstyleDebug
+sdk-demo:signingConfigWriterDefaultstyleDebugAndroidTest
+sdk-demo:signingConfigWriterDefaultstyleRelease
+sdk-demo:stripCustomstyleDebugDebugSymbols
+sdk-demo:stripCustomstyleReleaseDebugSymbols
+sdk:stripDebugDebugSymbols
+sdk-demo:stripDefaultstyleDebugDebugSymbols
+sdk-demo:stripDefaultstyleReleaseDebugSymbols
+sdk:stripReleaseDebugSymbols
+sdk-demo:transformClassesAndResourcesWithR8ForCustomstyleRelease
+sdk-demo:transformClassesAndResourcesWithR8ForDefaultstyleRelease
+sdk:transformClassesAndResourcesWithSyncLibJarsForDebug
+sdk:transformClassesAndResourcesWithSyncLibJarsForRelease
+sdk-demo:transformClassesWithDexBuilderForCustomstyleDebug
+sdk-demo:transformClassesWithDexBuilderForCustomstyleDebugAndroidTest
+sdk:transformClassesWithDexBuilderForDebugAndroidTest
+sdk-demo:transformClassesWithDexBuilderForDefaultstyleDebug
+sdk-demo:transformClassesWithDexBuilderForDefaultstyleDebugAndroidTest
+sdk:transformNativeLibsWithIntermediateJniLibsForDebug
+sdk:transformNativeLibsWithIntermediateJniLibsForRelease
+sdk:transformNativeLibsWithSyncJniLibsForDebug
+sdk:transformNativeLibsWithSyncJniLibsForRelease
+sdk-demo:validateSigningCustomstyleDebug
+sdk-demo:validateSigningCustomstyleDebugAndroidTest
+sdk-demo:validateSigningCustomstyleRelease
+sdk:validateSigningDebugAndroidTest
+sdk-demo:validateSigningDefaultstyleDebug
+sdk-demo:validateSigningDefaultstyleDebugAndroidTest
+sdk-demo:validateSigningDefaultstyleRelease
+sdk:verifyReleaseResources
+sdk-demo:writeCustomstyleDebugApplicationId
+sdk-demo:writeCustomstyleDebugModuleMetadata
+sdk-demo:writeCustomstyleReleaseApplicationId
+sdk-demo:writeCustomstyleReleaseModuleMetadata
+sdk-demo:writeDefaultstyleDebugApplicationId
+sdk-demo:writeDefaultstyleDebugModuleMetadata
+sdk-demo:writeDefaultstyleReleaseApplicationId
+sdk-demo:writeDefaultstyleReleaseModuleMetadata
+
+BUILD SUCCESSFUL in 2s
+1 actionable task: 1 executed

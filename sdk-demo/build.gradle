@@ -3,6 +3,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.betomorrow.appcenter'
 
+repositories {
+    google()
+}
+
 def getAppCenterApiToken = { ->
     project.hasProperty('appCenterApiToken') ? appCenterApiToken : ""
 }

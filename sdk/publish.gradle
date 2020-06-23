@@ -1,4 +1,27 @@
-apply plugin: 'com.novoda.bintray-release' 
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+
+artifactory {
+    contextUrl = 'http://oss.jfrog.org'
+    publish {
+        repository {
+            repoKey = 'oss-snapshot-local'
+            username = project.artifactoryUser
+            password = project.artifactoryKey
+        }
+        defaults {
+            publications('release')
+            publishArtifacts = true
+            publishPom = true
+        }
+    }
+    resolve {
+        repoKey = 'jcenter'
+    }
+    clientConfig.info.setBuildNumber(project.versionName)
+    clientConfig.info.setBuildName(project.artifactId)
+}
 
 publish {
     userOrg = 'paymaya'

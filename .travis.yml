@@ -1,9 +1,58 @@
 language: android
 dist: trusty
+jdk: oraclejdk8
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache
+
+env:
+  global:
+    - ANDROID_API=29
+    - ANDROID_BUILD_TOOLS=29.0.2
+    - VERSION=$(./gradlew --quiet :sdk:printSdkVersion)
+
 android:
   components:
-    - build-tools-29.0.2
-    - android-29
+    - android-${ANDROID_API}
+    - build-tools-${ANDROID_BUILD_TOOLS}
   licenses:
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
+
+stages:
+  - name: build
+  - name: snapshot
+    if: branch = master OR branch = chore/ci-cd-setup-test
+  - name: release
+    if: branch =~ release/*
+
+jobs:
+  include:
+    - stage: build
+      script: ./gradlew clean build test assemble
+    - stage: snapshot
+      script: ./gradlew artifactoryPublish -Dsnapshot=true -PartifactoryUser=$BINTRAY_USERNAME -PartifactoryKey=$BINTRAY_KEY -x test
+    - stage: release
+      script:
+        - ./gradlew bintrayUpload -Dsnapshot=false -PbintrayUser=$BINTRAY_USERNAME -PbintrayKey=$BINTRAY_KEY -PdryRun=false -x test
+        - export GIT_TAG=v$VERSION
+        - git tag $GIT_TAG -a -m "ci: Tag for version $GIT_TAG (build $TRAVIS_BUILD_NUMBER)"
+        - git push --tags
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  on:
+    tags: true
+
+notifications:
+  webhooks:
+    - https://www.travisbuddy.com/
+    - https://outlook.office.com/webhook/f1046da9-ef62-45ef-b176-e99022e65933@9d6786a3-701b-4d8c-aa63-9190f9d6775b/TravisCI/53a2f7cfac1b4962b676a203f4b20cf9/99be7e40-2c1a-4e63-92f2-8834e5eecff0

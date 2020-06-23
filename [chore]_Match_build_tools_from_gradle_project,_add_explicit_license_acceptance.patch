@@ -1,0 +1,213 @@
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gradle/wrapper/gradle-wrapper.properties	(revision 2cefa3a779edb0a8c02534d9c90b164485a574cf)
++++ gradle/wrapper/gradle-wrapper.properties	(date 1592537432000)
+@@ -3,4 +3,4 @@
+ distributionPath=wrapper/dists
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-5.4.1-all.zip
++distributionUrl=https\://services.gradle.org/distributions/gradle-5.6.4-all.zip
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision 2cefa3a779edb0a8c02534d9c90b164485a574cf)
++++ build.gradle	(date 1592538329000)
+@@ -9,13 +9,14 @@
+ 
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:3.5.3'
++        classpath 'com.android.tools.build:gradle:3.6.2'
+         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+         classpath "org.jlleitschuh.gradle:ktlint-gradle:9.1.1"
+-        classpath "gradle.plugin.com.betomorrow.gradle:appcenter-plugin:1.1.18"
++        classpath "gradle.plugin.com.betomorrow.gradle:appcenter-plugin:1.2.0"
+         classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.10.1"
+         classpath "com.novoda:bintray-release:0.9.2"
++        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.15.2"
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files
+     }
+@@ -52,7 +53,7 @@
+     ext {
+         compileSdkVersion = 29
+         buildToolsVersion = "29.0.2"
+-        minSdkVersion = 23
++        minSdkVersion = 21
+         targetSdkVersion = 29
+     }
+ }
+Index: sdk/gradle.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- sdk/gradle.properties	(revision 2cefa3a779edb0a8c02534d9c90b164485a574cf)
++++ sdk/gradle.properties	(date 1592539404000)
+@@ -1,4 +1,4 @@
+ groupId=com.paymaya
+ artifactId=paymaya-sdk-android
+ versionCode=25
+-versionName=2.0.0
++versionName=2.0.1-SNAPSHOT
+Index: sdk/publish.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- sdk/publish.gradle	(revision 2cefa3a779edb0a8c02534d9c90b164485a574cf)
++++ sdk/publish.gradle	(date 1592552582000)
+@@ -1,4 +1,40 @@
+-apply plugin: 'com.novoda.bintray-release' 
++apply plugin: 'com.novoda.bintray-release'
++apply plugin: 'com.jfrog.artifactory'
++apply plugin: 'maven-publish'
++
++//afterEvaluate {
++//    publishing {
++//        publications {
++//            sdk(MavenPublication) {
++//                groupId = project.groupId
++//                version = project.versionName
++//                artifactId = project.artifactId
++//                artifact("$buildDir/outputs/aar/sdk-release.aar")
++//            }
++//        }
++//    }
++//}
++
++artifactory {
++    contextUrl = 'http://oss.jfrog.org'
++    publish {
++        repository {
++            repoKey = 'oss-snapshot-local'
++            username = System.getProperty('artifactoryUser')
++            password = System.getProperty('artifactoryKey')
++        }
++        defaults {
++            publications('release')
++            publishArtifacts = true
++            publishPom = true
++        }
++    }
++    resolve {
++        repoKey = 'jcenter'
++    }
++    clientConfig.info.setBuildNumber(project.versionName)
++    clientConfig.info.setBuildName(project.artifactId)
++}
+ 
+ publish {
+     userOrg = 'paymaya'
+Index: sdk-demo/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- sdk-demo/build.gradle	(revision 2cefa3a779edb0a8c02534d9c90b164485a574cf)
++++ sdk-demo/build.gradle	(date 1592534929000)
+@@ -3,6 +3,10 @@
+ apply plugin: 'kotlin-android-extensions'
+ apply plugin: 'com.betomorrow.appcenter'
+ 
++repositories {
++    google()
++}
++
+ def getAppCenterApiToken = { ->
+     project.hasProperty('appCenterApiToken') ? appCenterApiToken : ""
+ }
+Index: sdk/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- sdk/build.gradle	(revision 2cefa3a779edb0a8c02534d9c90b164485a574cf)
++++ sdk/build.gradle	(date 1592539392000)
+@@ -39,6 +39,10 @@
+     experimental = true
+ }
+ 
++task printSdkVersion {
++    println project.versionName
++}
++
+ dependencies {
+     implementation fileTree(dir: 'libs', include: ['*.jar'])
+     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+Index: .travis.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .travis.yml	(revision 2cefa3a779edb0a8c02534d9c90b164485a574cf)
++++ .travis.yml	(date 1592498099000)
+@@ -1,9 +1,57 @@
+ language: android
+ dist: trusty
++jdk: oraclejdk8
++
++before_cache:
++  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
++  - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
++
++cache:
++  directories:
++    - $HOME/.gradle/caches/
++    - $HOME/.gradle/wrapper/
++    - $HOME/.android/build-cache
++
++env:
++  global:
++    - ANDROID_API=29
++    - ANDROID_BUILD_TOOLS=29.0.2
++    - VERSION=$(./gradlew --quiet :sdk:printSdkVersion)
++
+ android:
+   components:
+-    - build-tools-29.0.2
+-    - android-29
++    - android-${ANDROID_API}
++    - build-tools-${ANDROID_BUILD_TOOLS}
+   licenses:
+     - 'android-sdk-license-.+'
+-    - 'google-gdk-license-.+'
+\ No newline at end of file
++    - 'google-gdk-license-.+'
++
++before_script:
++  - export SNAPSHOT=
++
++stages:
++  - name: build
++  - name: snapshot
++    env: SNAPSHOT=true
++  - name: release
++    env: SNAPSHOT=false
++
++jobs:
++  include:
++    - stage: build
++      script: ./gradlew clean build -Psnapshot=$SNAPSHOT test
++    - stage: publishSnapshot
++      script: ./gradlew artifactoryPublish -Dsnapshot=true -PbintrayUser=$BINTRAY_USERNAME -PbintrayKey=$BINTRAY_KEY -x test
++    - stage: release
++      script:
++        - ./gradlew bintrayUpload -PbintrayUser=$BINTRAY_USERNAME -PbintrayKey=$BINTRAY_KEY -PdryRun=false -x test
++        - export GIT_TAG=v$VERSION
++        - git tag $GIT_TAG -a -m "[ci] Tag for version $GIT_TAG (build $TRAVIS_BUILD_NUMBER)"
++        - git push --tags
++
++deploy:
++  provider: releases
++  api_key: $GITHUB_TOKEN
++  bod
++  on:
++    tags: true
